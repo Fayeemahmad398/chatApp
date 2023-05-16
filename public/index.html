@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Chat App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form action="" method="" id="readyToChat">
+      <h1 style="text-align: center; font-size: 25px;">
+        JOIN CHAT ON HiHelloApp...
+      </h1>
+
+      <label for="username">Username</label>
+      <br />
+      <input type="text" id="username" placeholder="Enter Username" required />
+      <br />
+      <button type="button" id="btn">Join Chat</button>
+    </form>
+
+    <div id="chatroom">
+      <div id="chatroom-header">
+        <div class="headerData">
+          <h3 id="chat">Chatroom:</h3>
+          <h2 id="appname">HiHelloApp...</h2>
+          <p id="time">Time:</p>
+        </div>
+      </div>
+
+      <div class="messages msg-container">
+        <h1 id="currtime">Current Time:</h1>
+        <div class="callbox">
+          Welcome
+          <span class="material-icons" id="call">
+            call
+          </span>
+        </div>
+      </div>
+      <div class="msgInputhere">
+        <input
+          type="text"
+          id="msgInput"
+          placeholder="Type your  message here...."
+        />
+        <button type="submit" id="msgSendBtn">Send</button>
+      </div>
+      <div class="exit_btn">
+        <button id="exit_btn">Exit Chatroom</button>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js"
+      integrity="sha512-xbQU0+iHqhVt7VIXi6vBJKPh3IQBF5B84sSHdjKiSccyX/1ZI7Vnkt2/8y8uruj63/DVmCxfUNohPNruthTEQA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="client.js"></script>
+  </body>
+</html>

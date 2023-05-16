@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
+body {
+  font-family: "Instrument Serif", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0px;
+  font-weight: bold;
+  width: 100vw;
+  background: linear-gradient(
+    rgb(176, 166, 166),
+    rgb(150, 169, 150),
+    rgb(152, 152, 134)
+  );
+  
+}
+*{
+  margin: 0px;
+  padding: 0px;
+}
+form {
+  border: 2px solid black;
+  padding: 40px 70px;
+}
+h1 {
+  margin: 10px 0px;
+  font-weight: bold;
+}
+label {
+  font-size: 23px;
+  padding: 10px 0px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+input {
+  padding: 5px 3px;
+}
+#btn {
+  margin-top: 10px;
+  padding: 5px 15px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+#btn:hover {
+  background-color: rgb(64, 61, 61);
+}
+
+#chatroom {
+  display: none;
+  border: 1px solid black;
+  width: 95%;
+  height: 100vh;
+}
+#msgInput {
+  width: 200px;
+  height: 16px;
+  background-color: black;
+  color: white;
+  border: 3px solid #dbd9d9;
+}
+#time {
+  margin-right: 10px;
+}
+
+#appname {
+  margin: 0px;
+  animation: rotate 0.9s linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes round {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.headerData {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#currtime {
+  opacity: 0.2;
+  color: black;
+  position: fixed;
+  top: 240px;
+  margin: 0px;
+  left: 40px;
+}
+#msgSendBtn {
+  width: 120px;
+  height: 30px;
+  border-radius: 17px;
+  background-color: black;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 3px;
+}
+#msgSendBtn:hover {
+  color: black;
+  background-color: #dbd9d9;
+}
+#chatroom-header {
+  height: fit-content;
+  background: black;
+  border: 1px solid rgb(248, 201, 201);
+  color: #fff;
+
+  font-size: 24px;
+}
+.messages {
+  display: flex;
+  flex-direction: column;
+  height: 76vh;
+  overflow-y: auto;
+  /* border: 3px solid red; */
+}
+#call {
+  font-size: 50px;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+.callbox {
+  font-size: 20px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: black;
+  color: #fff;
+  position: fixed;
+  left: 48%;
+  top: 120px;
+  opacity: 0.5;
+  z-index: -100;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  animation: round 1s linear;
+}
+.callbox::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  transform: skewY(290deg);
+  top: 78px;
+  left: 12px;
+  position: absolute;
+}
+
+#username {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border: 3px solid rgb(202, 201, 201);
+}
+.message {
+  margin: 10px;
+  padding: 5px;
+  background-color: #dbd9d9;
+  width: fit-content;
+  font-size: 1.5rem;
+}
+.notification {
+  color: white;
+  background-color: black;
+  height: 30px;
+  padding: 5px 10px;
+  width: fit-content;
+  border-radius: 20px;
+  font-size: 14px;
+  margin: 5px 0px;
+  text-align: center;
+  align-self: center;
+}
+.exit_btn {
+  align-self: flex-end;
+  height: fit-content;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2px;
+}
+#exit_btn {
+  align-self: flex-end;
+  height: 25px;
+  width: 20%;
+  margin-top: 5px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+.user {
+  font-size: 15px;
+}
+.sent::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: black;
+  position: absolute;
+  transform: skewY(120deg);
+  top: 0px;
+  right: -4px;
+}
+.received::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #dbd9d9;
+  position: absolute;
+  transform: skewY(60deg);
+  top: 0px;
+  left: -4px;
+}
+.received {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10%;
+}
+.sent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  background-color: black;
+  color: #fff;
+  z-index: -100;
+  border-radius: 10%;
+}
+#btn2 {
+  margin-top: 10px;
+  padding: 5px 15px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  border-radius: 15px;
+}
+@media (max-width: 700px) {
+  .headerData {
+    font-size: medium;
+    display: grid;
+    font-size: 15px;
+    grid-template-columns: 1fr;
+
+    justify-items: center;
+  }
+  #exit_btn {
+    width: 30%;
+  }
+  .messages {
+    /* height: 70vh; */
+  }
+}
+@media (max-width: 500px) {
+  .headerData {
+    display: grid;
+    font-size: 15px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  form{
+    padding: 25px;
+  }
+  #exit_btn {
+    width: 50%;
+  }
+  .callbox {
+    left: 37vw;
+  }
+  #chatroom-header {
+    height: fit-content;
+  }
+  .messages {
+    height: 70vh;
+  }
+  #btn2 {
+    margin: 5px;
+  }
+}
